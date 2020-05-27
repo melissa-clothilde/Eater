@@ -27,9 +27,9 @@ WHEN I view a recommended recipe for any given input (or combination of inputs) 
 
 WHEN I don’t know what to eat and need recommendation THEN the eater dashboard just gives me random recipes
 
-WHEN my current weather is cool or cold* THEN I am presented with an additional set of recommended recipes that fits my input criteria and keep me warm and comforted
+WHEN my current weather is cool or cold THEN I am presented with an additional set of recommended recipes that fits my input criteria and keep me warm and comforted
 
-WHEN my current weather is warm or hot* THEN I am presented with an additional set of recommended recipes that still fit my input criteria and keep me cool and relaxed
+WHEN my current weather is warm or hot THEN I am presented with an additional set of recommended recipes that still fit my input criteria and keep me cool and relaxed
 
 WHEN I click on a keyword, phrase, or calorie count in the search history THEN I am again presented with all recommended recipes for that keyword, phrase, or calorie count
 
