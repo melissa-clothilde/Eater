@@ -1,16 +1,13 @@
 Welcome to the Eater wiki!
 
-Project title: Eater.com!
+Welcome to Eater.com!
 
 Project description: This app provide you with recipes given certain ingredients and calorie limit.
 
 User story: AS A human being that eats everyday I WANT to change my menu daily SO THAT I don’t eat out much, make better plan and make selections easier.
 
-Sketch: This app will plan your daily meal according to the calories limit and ingredients available. It is smart to judge what is the best calorie limit according to the weather today. Besides, it enables you to do calorie search for any specific ingredient.
-
-APIs to be used: Recipe - Food - Nutrition https://rapidapi.com/spoonacular/api/recipe-food-nutrition
-
-Food calories https://rapidapi.com/kenpi04/api/food-calorie-data-search
+APIs used: 
+Recipe - Food - https://rapidapi.com/brianiswu/api/recipe-puppy https://rapidapi.com/spoonacular/api/recipe-food-nutrition
 
 Weather API https://rapidapi.com/weatherbit/api/weather
 
