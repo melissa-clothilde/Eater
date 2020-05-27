@@ -1,5 +1,3 @@
-Welcome to the Eater wiki!
-
 Welcome to Eater.com!
 
 Project description: This app provide you with recipes given certain ingredients and calorie limit.
@@ -8,13 +6,11 @@ User story: AS A human being that eats everyday I WANT to change my menu daily S
 
 APIs used: 
 Recipe - Food - https://rapidapi.com/brianiswu/api/recipe-puppy https://rapidapi.com/spoonacular/api/recipe-food-nutrition
-
 Weather API https://rapidapi.com/weatherbit/api/weather
 
-Moment.JS
+
 
 Acceptance Criteria:
-
 GIVEN a recipe dashboard with form inputs
 
 WHEN I input a food to search for a recipe THEN I am presented with recommended recipes for that food and that food is added to the search history
