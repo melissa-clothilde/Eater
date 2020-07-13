@@ -2,7 +2,8 @@
 
 Project description: This app provide you with recipes given certain ingredients and calorie limit.
 
-### User story: AS A human being that eats everyday I WANT to change my menu daily SO THAT I don’t eat out much, make better plan and make selections easier.
+### User story:
+AS A human being that eats everyday I WANT to change my menu daily SO THAT I don’t eat out much, make better plan and make selections easier.
 
 ### APIs used: 
 Recipe - Food - https://rapidapi.com/brianiswu/api/recipe-puppy https://rapidapi.com/spoonacular/api/recipe-food-nutrition
