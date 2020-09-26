@@ -1,5 +1,6 @@
 var recipeColumn = $('.recipe-column')
 var weatherbtn = $('#search-btn0');
+const APIKey = "AIzaSyCY-tw0lRW4rcAKY954zfn2Fio6HZgq0ls"
 
 weatherbtn.click(function () {
   $('.recipe-column').removeClass('hide');
@@ -42,7 +43,7 @@ function showPosition(position) {
       iconTag.attr('style', 'width:50px; height:50px;');
 
       var stayWarmArray = ['squash', 'potatoe', 'oats', 'broth', 'hot', 'soup', 'meat', 'chili', 'ginger', 'brown rice', 'garlic', 'coconut oil', 'potatoe', 'roast'];
-      var stayCoolArray = ['cucumber', 'smoothie', 'cold', 'fresh', 'avocado', 'melon', 'ice', 'salad', 'champagne'];
+      var stayCoolArray = ['cucumber', 'smoothie', 'cold', 'taco', 'avocado', 'melon', 'ice', 'berries', 'salad', 'champagne'];
 
       if (temp < 68) {
         heading.append('Current Temperature is ' + temp + ' \xB0', 'F ');
@@ -61,7 +62,7 @@ function showPosition(position) {
         var cool = stayCoolArray[index];
         retrieveRecipie(cool);
       }
-    })
+    }) 
 }
 
 // Add listner to the 'Search for Recipe button
@@ -206,56 +207,51 @@ function retrieveRecipieByBoth() {
     }
     $('.result').removeClass('hide');
   })
-  var clicky = document.querySelector("#search-btn1")
-  var searches = document.querySelector("#recipe-value")
-  var storedKeywords = document.querySelector(".stored-keywords")
-  clicky.addEventListener("click", recentSearchList)
+};
 
 
-  function recentSearchList() {
-    var searchString = searches.value
+var clicky = document.querySelector("#search-btn1")
+var searches = document.querySelector("#recipe-value")
+var storedKeywords = document.querySelector(".stored-keywords")
+clicky.addEventListener("click", recentSearchList)
 
-    var recentItems = localStorage.getItem("recentItems")
-    if (!recentItems) {
-      recentItems = []
-    }
-    else {
-      recentItems = JSON.parse(recentItems)
-    }
-    if (recentItems.indexOf(searchString) != -1) {
-      return
-    }
-    recentItems.push(searchString)
 
-    while (recentItems.length > 10) {
-      recentItems.shift()
-    }
 
-    localStorage.setItem("recentItems", JSON.stringify(recentItems))
-    updateRecentSearches()
+function recentSearchList() {
+  var searchString = searches.value
+
+  let recentItems = localStorage.getItem("recentItems")
+  if (!recentItems) {
+    recentItems = []
   }
-
-  function updateRecentSearches() {
-    storedKeywords.innerHTML = ""
-    let recentItems = localStorage.getItem("recentItems")
-    if (!recentItems) {
-      return
-    }
+  else {
     recentItems = JSON.parse(recentItems)
-    for (let index = 0; index < recentItems.length; index++) {
-      const element = recentItems[index];
-      var button = document.createElement("button")
-      button.textContent = element
-      var br = document.createElement("br")
-      button.setAttribute("class", "btn btn-danger button m-2")
-      button.addEventListener("click", updateRecentItemsUI)
-      storedKeywords.prepend(br)
-      storedKeywords.prepend(button)
-    }
   }
-  function updateRecentItemsUI(event) {
-    var finalStep = event.target.textContent
-    retreiveRecipie(finalStep)
+
+  recentItems.push(searchString)
+  while (recentItems.length > 10) {
+    recentItems.shift()
   }
+
+  localStorage.setItem("recentItems", JSON.stringify(recentItems))
   updateRecentSearches()
 }
+
+function updateRecentSearches() {
+  storedKeywords.innerHTML = ""
+  let recentItems = localStorage.getItem("recentItems")
+  if (!recentItems) {
+    return
+  }
+  recentItems = JSON.parse(recentItems)
+  for (let index = 0; index < recentItems.length; index++) {
+    const element = recentItems[index];
+    var button = document.createElement("button")
+    button.textContent = element
+    var br = document.createElement("br")
+    button.setAttribute("class", "btn btn-danger button m-2")
+    storedKeywords.prepend(br)
+    storedKeywords.prepend(button)
+  }
+}
+updateRecentSearches()

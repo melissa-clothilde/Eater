@@ -1,40 +1,111 @@
+body, html {
+    height: 100%;
+    margin: 0;
+  }
+  
 body {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* The image used */
+    background-image: url("./images/17906567.jpg");
+    /* Full height */
+    height: 10%; 
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
+.flex-container {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+}
+
+.mag-glass {
+    color: #8FBC8F;
+    border: 1px solid #ced4da;
+}
+
+.mag-glass:hover {
+    color: #8FBC8F;
+    border: 1px solid #ced4da;
+}
+
+.add-margin {
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
 h1 {
-    background: rgba(197, 77, 21, 0.966);
-    color: #ffffff;
-    height: 100px;
+    background: #F8F8FF;
+    color: #8FBC8F;
+    height: 90px;
     margin-bottom: 0;
-    font-weight: bolder;
     font-size: 50px;
-    border-top: 3px solid #dc3545;
-    border-bottom: 3px solid #dc3545;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-top: 3px solid #F8F8FF;
+    border-bottom: 3px solid #F8F8FF;
+}
+
+a:hover {
+    color: #8FBC8F;
+}
+
+.nav-style {
+    background: rgba(247, 243, 243, 0.9);
+
 }
 
 .title{
     padding-top: 7px;
+    font-family: 'Pacifico', cursive;
+    font-size: 50px;
+    color: #8FBC8F;
+}
+
+.container-fluid {
+    margin-top: 50px;
 }
 
 .fa-teeth-open {
     position: relative;
     bottom: 2px;
-    font-size: 15px;
+    font-size: 40px;
 }
 
+.p-div {
+    background: #8FBC8F;
+    height: 45px;
+    margin: 0;
+    border-top: 3px solid #D8BFD8;
+
+}
 #motto {
-    font-size: 12px;
+    /* position: relative; */
+    font-size: 15px;
     margin-top: 7px;
+    color: #8FBC8F;
+    /* top: 5px; */
+    font-family: 'Source Sans Pro', sans-serif;
+    white-space: pre;
+    font-style: italic;
 }
 
-.jumbo {
-    padding-top: 0;
-    padding-left: 0;
-    padding-right: 0;
-    width: auto;
+.search-params {
+    margin-top: 30%;
 }
+
+
+div.transbox {
+    background: rgba(247, 243, 243, 0.7);
+    height: auto;
+    padding: 15px;
+}
+
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 
 .recipe-column {
     margin-right: 0;
@@ -48,12 +119,10 @@ h1 {
 }
 
 .slide {
-    width: 300px;
+    /* width: 300px; */
 }
 
-.button {
-    background: rgba(209, 74, 12, 0.966);
-}
+
 
 #use-weather {
     margin-left: 10px;
@@ -73,24 +142,22 @@ h1 {
 }
 
 #search-btn0 {
-    min-width: 258px;
-    padding-right: 20px;
-    padding-left: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-    background: #dc3545;
+    height: 38px;
+    background: #F8F8FF;
+    color: #8FBC8F;
+    border: solid 1px #E6E6FA;
+}
+
+hr {
+    background-color: white;
+    margin: 0;
 }
 
 #search-btn3 {
-    min-width: 256px;
-    padding-right: 8px;
-    padding-left: 8px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    background: rgba(209, 74, 12, 0.966);
+    height: 38px;
+    background: #F8F8FF;
+    color: #8FBC8F;
+    border: solid 1px #E6E6FA;
+
 }
 
-#recipe-value, #ingredients-value {
-    max-width: 263px;
-}

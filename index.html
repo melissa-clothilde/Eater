@@ -17,182 +17,177 @@
         href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
         crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pacifico&family=Source+Sans+Pro:ital,wght@0,200;1,200&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
 </head>
 
 <body>
-    <header class="jumbo">
-        <h1 class="text-center title">Eater
-            <i class="fa fa-teeth-open"></i><p id='motto'>recipes guided by weather and creativity</p></h1>
-    </header>
+    <!-- Image and text -->
+    <nav class="navbar nav-style">
+        <a class="navbar-brand title" href="#">
+            <i class="fa fa-teeth-open"></i>
+            Eater<span id='motto'> Recipes guided by weather</span>
+        </a>
 
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-4 left">
-                <h6 class="enter-calories">
-                    <div class="input-group-btn">
-                        <button id="search-btn0" class="btn btn-danger button"
-                            type="submit">
-                            <span>Recommendation by Weather &nbsp;&nbsp;</span><i
-                                class="fas fa-cloud-sun"></i>
-                        </button>
-                    </div>
-                </h6>
-
-                <h6 class="search-for-recipe">Search for a Recipe:</h6>
-                <form>
-                    <div class="input-group">
-                        <input id="recipe-value" type="text"
-                            placeholder="Enter any food!" class="form-control">
-                        <div class="input-group-btn">
-                            <button id="search-btn1"
-                                class="btn btn-danger button" type="submit">
-                                <i class="fa fa-search"></i>
-                            </button>
-                        </div>
-                    </div>
-                </form>
-                <br>
-                <h6 class="city">Search by Ingredients:</h6>
-                <form>
-                    <div class="input-group">
-                        <input id="ingredients-value" type="text"
-                            placeholder="Enter ingredients!"
-                            class="form-control">
-                        <div class="input-group-btn">
-                            <button id="search-btn2"
-                                class="btn btn-danger button" type="submit">
-                                <i class="fa fa-search"></i>
-                            </button>
-                        </div>
-                    </div>
-                </form>
-                <br>
-                <h6 class="enter-calories">
-                    <div class="input-group-btn">
-                        <button id="search-btn3" class="btn btn-danger button"
-                            type="submit">
-                            <span>Combine Above Recipe & Ingredients</span>
-                        </button>
-                    </div>
-                </h6>
-
-                <br>
-                <br>
-                <br>
-                <div class="stored-container">
-                    <h6 class="recent-searches">
-                        Your Recent Searches Will Apear Here:
-                    </h6>
-                    <!-- <div class="stored-keywords">
-                        <button class="btn btn-danger button stored">
-                            <span id="store1"></span>
-                        </button>
-                        <br>
-                        <button class="btn btn-danger button stored">
-                            <span id="store2"></span>
-                        </button>
-                        <br>
-                        <button class="btn btn-danger button stored">
-                            <span id="store3"></span>
-                        </button>
-                        <br>
-                        <button class="btn btn-danger button stored">
-                            <span id="store4"></span>
-                        </button>
-                        <br>
-                        <button class="btn btn-danger button stored">
-                            <span id="store5"></span>
-                        </button>
-                    </div> -->
-                </div>
+    </nav>
+    
+    <div class=" search-params transbox">
+        <div class="wrap d-flex justify-content-around">
+            <div class="input-group-btn add-margin">
+                <button id="search-btn0" class="btn button" type="submit">
+                    <span>Recommendation by </span><i
+                        class="fas fa-cloud-sun"></i>
+                </button>
             </div>
 
-            <div class="col-lg-8 container-fluid recipe-column">
-                <h4 id="weather-heading"></h4>
-                <div class="row result hide">
-
-                    <div class="col-md-5">
-                        <img id="img1" src="#" class="card-img recipe-image"
-                            alt="#">
-                    </div>
-
-                    <div class="col-md-7">
-                        <div id="option-1">
-                            <h5 id="recipe-title1" class="card-title">
-                                Card title
-                            </h5>
-                            <p id="recipe-description1" class="card-text">
-                            </p>
-                            <p id="ingredients1" class="card-text">Ingredients:
-                            </p>
-                            </small>
-                            </p>
-                            <a id="recipe-btn1" href="#" target="_blank"
-                                class="btn btn-danger recipe-link button">Get
-                                Recipe!</a>
-                        </div>
-                    </div>
+            <form class="form-inline add-margin">
+                <div class="input-group">
+                    <input id="recipe-value" type="text"
+                        placeholder="Find a Recipe..." class="form-control ">
+                    <span class="input-group-btn">
+                        <button id="search-btn1" class="btn btn-light mag-glass"
+                            type="submit">
+                            <i class="fa fa-search "></i>
+                        </button>
+                    </span>
                 </div>
-                <br>
-                <br>
-                <div class="row result hide">
+            </form>
 
-                    <div class="col-md-5">
-                        <img id="img2" src="#" class="card-img recipe-image"
-                            alt="#">
-                    </div>
+            <form class="form-inline add-margin">
+                <div class="input-group">
 
-                    <div class="col-md-7">
-                        <div id="option-2">
-                            <h5 id="recipe-title2" class="card-title">
-                                Card title
-                            </h5>
-                            <p id="recipe-description2" class="card-text">
-                            </p>
-                            <p id="ingredients2" class="card-text">Ingredients:
-                            </p>
-                            </small>
-                            </p>
-                            <a id="recipe-btn2" href="#" target="_blank"
-                                class="btn btn-danger recipe-link button">Get
-                                Recipe!</a>
-                        </div>
-                    </div>
+                    <input id="ingredients-value" type="text"
+                        placeholder="Find an Ingredient..."
+                        class="form-control ">
+                    <span class="input-group-btn">
+                        <button id="search-btn2" class="btn btn-light mag-glass"
+                            type="submit">
+                            <i class="fa fa-search "></i>
+                        </button>
+                    </span>
                 </div>
-                <br>
-                <br>
-                <div class="row result hide">
+            </form>
 
-                    <div class="col-md-5">
-                        <img id="img3" src="#" class="card-img recipe-image"
-                            alt="#">
-                    </div>
-
-                    <div class="col-md-7">
-                        <div id="option-3">
-                            <h5 id="recipe-title3" class="card-title">
-                                Card title
-                            </h5>
-                            <p id="recipe-description3" class="card-text">
-                            </p>
-                            <p id="ingredients3" class="card-text">Ingredients:
-                            </p>
-                            </small>
-                            </p>
-                            <a id="recipe-btn3" href="#" target="_blank"
-                                class="btn btn-danger recipe-link button">Get
-                                Recipe!</a>
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <br>
+            <div class="input-group-btn add-margin">
+                <button id="search-btn3" class="btn button" type="submit">
+                    <span>Combine <i
+                        class="fa fa-search"></i> Recipe with Ingredients </span>
+                </button>
             </div>
         </div>
     </div>
+    <!-- <div class="stored-container hide">
+        <h6 class="recent-searches">
+            Recent Searches:
+        </h6>
+        <div class="stored-keywords">
+            <button class="btn button stored">
+                <span id="store1"></span>
+            </button>
+
+            <button class="btn button stored">
+                <span id="store2"></span>
+            </button>
+
+            <button class="btn button stored">
+                <span id="store3"></span>
+            </button>
+
+            <button class="btn button stored">
+                <span id="store4"></span>
+            </button>
+
+            <button class="btn button stored">
+                <span id="store5"></span>
+            </button>
+        </div>
     </div>
+
+    <div class="card-row">
+        <h4 id="weather-heading"></h4>
+        <div class="row result hide">
+
+            <div class="col-md-5">
+                <img id="img1" src="#" class="card-img recipe-image" alt="#">
+            </div>
+
+            <div class="col-md-7">
+                <div id="option-1">
+                    <h5 id="recipe-title1" class="card-title">
+                        Card title
+                    </h5>
+                    <p id="recipe-description1" class="card-text">
+                    </p>
+                    <p id="ingredients1" class="card-text">Ingredients:
+                    </p>
+                    </small>
+                    </p>
+                    <a id="recipe-btn1" href="#" target="_blank"
+                        class="btn recipe-link button">Get
+                        Recipe!</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row result hide">
+
+            <div class="col-md-5">
+                <img id="img2" src="#" class="card-img recipe-image" alt="#">
+            </div>
+
+            <div class="col-md-7">
+                <div id="option-2">
+                    <h5 id="recipe-title2" class="card-title">
+                        Card title
+                    </h5>
+                    <p id="recipe-description2" class="card-text">
+                    </p>
+                    <p id="ingredients2" class="card-text">Ingredients:
+                    </p>
+                    </small>
+                    </p>
+                    <a id="recipe-btn2" href="#" target="_blank"
+                        class="btn recipe-link button">Get
+                        Recipe!</a>
+                </div>
+            </div>
+        </div> 
+
+
+        <div class="row result hide">
+
+            <div class="col-md-5">
+                <img id="img3" src="#" class="card-img recipe-image" alt="#">
+            </div>
+
+            <div class="col-md-7">
+                <div id="option-3">
+                    <h5 id="recipe-title3" class="card-title">
+                        Card title
+                    </h5>
+                    <p id="recipe-description3" class="card-text">
+                    </p>
+                    <p id="ingredients3" class="card-text">Ingredients:
+                    </p>
+                    </small>
+                    </p>
+                    <a id="recipe-btn3" href="#" target="_blank"
+                        class="btn recipe-link button">Get
+                        Recipe!</a>
+                </div>
+            </div>
+        </div> 
+
+
+
+    </div> -->
+
+
 
 
     <!--[if lt IE 7]>
