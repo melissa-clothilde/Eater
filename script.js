@@ -2,6 +2,7 @@ $(document).ready(function () {
   var recipeColumn = $('.recipe-column')
   var weatherbtn = $('#search-btn0');
   const APIKey = "AIzaSyCY-tw0lRW4rcAKY954zfn2Fio6HZgq0ls"
+  getLocation();
 
   weatherbtn.click(function () {
     $('.recipe-column').removeClass('hide');
@@ -19,7 +20,6 @@ $(document).ready(function () {
       alert("Geolocation is not supported by this browser.");
     }
   }
-
 
   // This will get called after getCurrentPosition()
   function showPosition(position) {

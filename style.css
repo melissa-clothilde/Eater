@@ -103,14 +103,6 @@ div.transbox {
     flex-wrap: wrap;
 }
 
-.recipe-image {
-    height: 300px;
-    width: 300px;
-}
-/* .card-body {
-    width: 100vh;
-} */
-
 /* .recipe-column {
     margin-right: 0;
     margin-top: 27px;
@@ -161,6 +153,10 @@ div.transbox {
     width: 100%;
     padding: 50px;    
     margin-bottom: 25px;
+}
+
+img {
+    box-sizing: border-box;
 }
 
 .card-text {
