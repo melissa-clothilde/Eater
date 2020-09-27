@@ -7,6 +7,9 @@
 <!--<![endif]-->
 
 <head>
+    <script>
+        window.onload = function () { setTimeout(function () { document.body.style.opacity = "100"; }, 500); };
+    </script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title></title>
@@ -26,169 +29,165 @@
 </head>
 
 <body>
-    <!-- Image and text -->
-    <nav class="navbar nav-style">
-        <a class="navbar-brand title" href="#">
-            <i class="fa fa-teeth-open"></i>
-            Eater<span id='motto'> Recipes guided by weather</span>
-        </a>
+    <style>
+        body {
+            opacity: 0;
+        }
+    </style>
+    <div id="page-container">
+        <div id="content-wrap">
+            <!-- Image and text -->
+            <nav class="navbar more-opacity">
+                <a class="navbar-brand title" href="#">
+                    <i class="fa fa-teeth-open"></i>
+                    Eater<span id='motto'> Recipes guided by weather</span>
+                </a>
 
-    </nav>
-    
-    <div class=" search-params transbox">
-        <div class="wrap d-flex justify-content-around">
-            <div class="input-group-btn add-margin">
-                <button id="search-btn0" class="btn button" type="submit">
-                    <span>Recommendation by </span><i
-                        class="fas fa-cloud-sun"></i>
-                </button>
-            </div>
+            </nav>
 
-            <form class="form-inline add-margin">
-                <div class="input-group">
-                    <input id="recipe-value" type="text"
-                        placeholder="Find a Recipe..." class="form-control ">
-                    <span class="input-group-btn">
-                        <button id="search-btn1" class="btn btn-light mag-glass"
+            <div class=" search-params transbox">
+                <div class="wrap d-flex justify-content-around">
+                    <div class="input-group-btn add-margin">
+                        <button id="search-btn0" class="btn button"
                             type="submit">
-                            <i class="fa fa-search "></i>
+                            <span>Recommendation by </span><i
+                                class="fas fa-cloud-sun"></i>
                         </button>
-                    </span>
-                </div>
-            </form>
+                    </div>
 
-            <form class="form-inline add-margin">
-                <div class="input-group">
+                    <form class="form-inline add-margin">
+                        <div class="input-group">
+                            <input id="recipe-value" type="text"
+                                placeholder="Find a Recipe..."
+                                class="form-control ">
+                            <span class="input-group-btn">
+                                <button id="search-btn1"
+                                    class="btn btn-light mag-glass"
+                                    type="submit">
+                                    <i class="fa fa-search "></i>
+                                </button>
+                            </span>
+                        </div>
+                    </form>
 
-                    <input id="ingredients-value" type="text"
-                        placeholder="Find an Ingredient..."
-                        class="form-control ">
-                    <span class="input-group-btn">
-                        <button id="search-btn2" class="btn btn-light mag-glass"
+                    <form class="form-inline add-margin">
+                        <div class="input-group">
+
+                            <input id="ingredients-value" type="text"
+                                placeholder="Find an Ingredient..."
+                                class="form-control ">
+                            <span class="input-group-btn">
+                                <button id="search-btn2"
+                                    class="btn btn-light mag-glass"
+                                    type="submit">
+                                    <i class="fa fa-search "></i>
+                                </button>
+                            </span>
+                        </div>
+                    </form>
+
+                    <div class="input-group-btn add-margin">
+                        <button id="search-btn3" class="btn button"
                             type="submit">
-                            <i class="fa fa-search "></i>
+                            <span>Combine <i class="fa fa-search"></i> Recipe
+                                with
+                                Ingredients </span>
                         </button>
-                    </span>
+                    </div>
                 </div>
-            </form>
+            </div>
+            
+            <h5 id="weather-heading" class="container more-opacity">
+            </h5>
+            <div class="container card-row result hide">
 
-            <div class="input-group-btn add-margin">
-                <button id="search-btn3" class="btn button" type="submit">
-                    <span>Combine <i
-                        class="fa fa-search"></i> Recipe with Ingredients </span>
-                </button>
+                <div class="card more-opacity">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img id="img1" src="..."
+                                class="card-img recipe-image alt=" ...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h4 id="recipe-title1" class="card-title">Card
+                                    title
+                                </h4>
+                                <p id="recipe-description1" class="card-text">
+                                </p>
+                                <p id="ingredients1" class="card-text">
+                                    Ingredients:
+                                </p>
+                                </small>
+                                </p>
+                                <a id="recipe-btn1" href="#" target="_blank"
+                                    class="btn btn-light recipe-link button">Get
+                                    Recipe!</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card more-opacity">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img id="img2" src="..."
+                                class="card-img recipe-image alt=" ...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h4 id="recipe-title2" class="card-title">Card
+                                    title
+                                </h4>
+                                <p id="recipe-description2" class="card-text">
+                                </p>
+                                <p id="ingredients2" class="card-text">
+                                    Ingredients:
+                                </p>
+                                </small>
+                                </p>
+                                <a id="recipe-btn2" href="#" target="_blank"
+                                    class="btn btn-light recipe-link button">Get
+                                    Recipe!</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card more-opacity">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img id="img3" src="..."
+                                class="card-img recipe-image alt=" ...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h4 id="recipe-title3" class="card-title">Card
+                                    title
+                                </h4>
+                                <p id="recipe-description3" class="card-text">
+                                </p>
+                                <p id="ingredients3" class="card-text">
+                                    Ingredients:
+                                </p>
+                                </small>
+                                </p>
+                                <a id="recipe-btn3" href="#" target="_blank"
+                                    class="btn btn-light recipe-link button">Get
+                                    Recipe!</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
+
+        <footer class="footer">
+            <div class="transbox footer-center">
+                <span>&#xA9; 2020 Eater</span>
+            </div>
+        </footer>
     </div>
-    <!-- <div class="stored-container hide">
-        <h6 class="recent-searches">
-            Recent Searches:
-        </h6>
-        <div class="stored-keywords">
-            <button class="btn button stored">
-                <span id="store1"></span>
-            </button>
-
-            <button class="btn button stored">
-                <span id="store2"></span>
-            </button>
-
-            <button class="btn button stored">
-                <span id="store3"></span>
-            </button>
-
-            <button class="btn button stored">
-                <span id="store4"></span>
-            </button>
-
-            <button class="btn button stored">
-                <span id="store5"></span>
-            </button>
-        </div>
-    </div>
-
-    <div class="card-row">
-        <h4 id="weather-heading"></h4>
-        <div class="row result hide">
-
-            <div class="col-md-5">
-                <img id="img1" src="#" class="card-img recipe-image" alt="#">
-            </div>
-
-            <div class="col-md-7">
-                <div id="option-1">
-                    <h5 id="recipe-title1" class="card-title">
-                        Card title
-                    </h5>
-                    <p id="recipe-description1" class="card-text">
-                    </p>
-                    <p id="ingredients1" class="card-text">Ingredients:
-                    </p>
-                    </small>
-                    </p>
-                    <a id="recipe-btn1" href="#" target="_blank"
-                        class="btn recipe-link button">Get
-                        Recipe!</a>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="row result hide">
-
-            <div class="col-md-5">
-                <img id="img2" src="#" class="card-img recipe-image" alt="#">
-            </div>
-
-            <div class="col-md-7">
-                <div id="option-2">
-                    <h5 id="recipe-title2" class="card-title">
-                        Card title
-                    </h5>
-                    <p id="recipe-description2" class="card-text">
-                    </p>
-                    <p id="ingredients2" class="card-text">Ingredients:
-                    </p>
-                    </small>
-                    </p>
-                    <a id="recipe-btn2" href="#" target="_blank"
-                        class="btn recipe-link button">Get
-                        Recipe!</a>
-                </div>
-            </div>
-        </div> 
-
-
-        <div class="row result hide">
-
-            <div class="col-md-5">
-                <img id="img3" src="#" class="card-img recipe-image" alt="#">
-            </div>
-
-            <div class="col-md-7">
-                <div id="option-3">
-                    <h5 id="recipe-title3" class="card-title">
-                        Card title
-                    </h5>
-                    <p id="recipe-description3" class="card-text">
-                    </p>
-                    <p id="ingredients3" class="card-text">Ingredients:
-                    </p>
-                    </small>
-                    </p>
-                    <a id="recipe-btn3" href="#" target="_blank"
-                        class="btn recipe-link button">Get
-                        Recipe!</a>
-                </div>
-            </div>
-        </div> 
-
-
-
-    </div> -->
-
-
-
 
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
