@@ -186,6 +186,7 @@ $(document).ready(function () {
 
     $.ajax(settings).done(function (response) {
       response = JSON.parse(response);
+      console.log(response);
       results = response.results;
       var results2 = [];
       for (i = 0; i < results.length; i++) {
